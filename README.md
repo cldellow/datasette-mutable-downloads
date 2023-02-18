@@ -20,6 +20,18 @@ can for immutable databases.
 
 Example: https://dux.fly.dev/cooking
 
+## Notes
+
+This is achieved by a somewhat gross monkeypatch of the `DatabaseDownload`
+view.
+
+We detect if the database is mutable. If it is, we first create a copy via
+[`VACUUM INTO`](https://www.sqlite.org/lang_vacuum.html#vacuum_with_an_into_clause).
+
+We then stream that file to the user, and delete it.
+
+This requires SQLite 3.27.0 or newer (Feb 2019).
+
 ## Development
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
