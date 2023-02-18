@@ -4,7 +4,8 @@ import sqlite3
 import aiofiles
 import aiofiles.os
 from datasette import hookimpl
-from datasette.utils import tilde_decode
+from datasette.views.base import DatasetteError
+from datasette.utils import add_cors_headers, tilde_decode
 from datasette.utils.asgi import AsgiFileDownload, NotFound, Response, Forbidden
 
 
