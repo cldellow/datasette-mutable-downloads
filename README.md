@@ -15,7 +15,10 @@ Install this plugin in the same environment as Datasette.
 
 ## Usage
 
-Usage instructions go here.
+You can now download a mutable database on its database page, just as you
+can for immutable databases.
+
+Example: https://dux.fly.dev/cooking
 
 ## Development
 
