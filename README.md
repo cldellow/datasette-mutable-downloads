@@ -32,6 +32,16 @@ We then stream that file to the user, and delete it.
 
 This requires SQLite 3.27.0 or newer (Feb 2019).
 
+> **NOTE**
+>
+> The act of `VACUUM INTO` could be resource intensive if your
+> database is large. If you expose your Datasette to the Internet,
+> you may wish to restrict this to only authenticated users.
+>
+> To do that, add a permissions block in your metadata.json:
+> 
+> permissions: { "view-database-download": { "gh_id": "*" } }
+
 ## Development
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
