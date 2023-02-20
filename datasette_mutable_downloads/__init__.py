@@ -12,9 +12,7 @@ from datasette.utils.asgi import AsgiFileDownload, NotFound, Response, Forbidden
 @hookimpl
 def startup(datasette):
     from datasette.views.database import DatabaseDownload
-    print(DatabaseDownload)
     DatabaseDownload.get = DatabaseDownload_get
-    pass
 
 # Based on https://github.com/simonw/datasette/blob/0b4a28691468b5c758df74fa1d72a823813c96bf/datasette/views/database.py#L172-L212,
 # but patched to permit retrieving mutable databases.
