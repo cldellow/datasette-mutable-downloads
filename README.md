@@ -40,7 +40,13 @@ This requires SQLite 3.27.0 or newer (Feb 2019).
 >
 > To do that, add a permissions block in your metadata.json:
 > 
-> permissions: { "view-database-download": { "gh_id": "*" } }
+> ```
+> "permissions": {
+>   "view-database-download": {
+>     "gh_id": "*"
+>   }
+> }
+> ```
 
 ## Development
 
